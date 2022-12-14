@@ -76,6 +76,7 @@ resource "helm_release" "this" {
 # https://agones.dev/site/docs/installation/install-agones/helm/
 module "agones_system_node_group" {
   source = "terraform-aws-modules/eks/aws//modules/eks-managed-node-group"
+  version = "18.31.2"
 
   name         = var.namespace
   cluster_name = var.cluster_name
@@ -125,7 +126,7 @@ module "agones_system_node_group" {
 
 module "agones_gameserver_node_group" {
   source = "terraform-aws-modules/eks/aws//modules/eks-managed-node-group"
-
+  version = "18.31.2"
   name         = "gameserver"
   cluster_name = var.cluster_name
 
