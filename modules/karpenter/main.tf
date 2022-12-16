@@ -80,12 +80,12 @@ metadata:
   name: default
 spec:
   requirements:
-    - key: "kubernetes.io/arch"
-      operator: In
-      values: ["arm64"]
     - key: karpenter.sh/capacity-type
       operator: In
       values: ["on-demand", "spot"]
+    - key: node.kubernetes.io/instance-type
+      operator: In
+      values: ["t3.medium", "m3.large"]
   limits:
     resources:
       cpu: 100

@@ -115,8 +115,8 @@ module "eks" {
   eks_managed_node_groups = {
     default = {
       desired_size          = 1
-      ami_type              = "AL2_ARM_64"
-      instance_types        = ["t4g.medium"]
+      ami_type              = "AL2_x86_64"
+      instance_types        = ["t3.medium"]
       subnet_ids            = var.vpc.private_subnets
       create_security_group = false
       iam_role_additional_policies = [

@@ -22,7 +22,7 @@ spec:
             resources:
               requests:
                 memory: "64Mi"
-                cpu: "50m"
+                cpu: "0.5"
           tolerations:
           - key: "gameserver"
             operator: "Exists"
